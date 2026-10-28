@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-box - flex2</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1360px;
+      margin: 0 auto;
+    }
+
+    .flex_item {
+      flex: 1 1 auto;
+    }
+
+    .flex_item:nth-child(1) {
+      width: 30%;
+    }
+
+    .flex_item:nth-child(2) {
+      width: 60%;
+    }
+
+    .flex_item:nth-child(3) {
+      width: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita quaerat, ipsa deserunt, itaque odit id fuga
+        voluptas fugit hic repellat aperiam impedit numquam dicta laboriosam? A iste officiis voluptate vel!</p>
+    </div>
+    <div class="flex_item">bbbb</div>
+    <div class="flex_item">ccccccccc</div>
+  </div>
+</body>
+
+</html>

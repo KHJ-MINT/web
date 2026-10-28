@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-box - justify-content</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      justify-content: flex-start; /* item을 시작점을 기준으로 정렬함. */
+      justify-content: flex-end; /* item을 끝점을 기준으로 정렬함. */
+      justify-content: center; /* item을 중앙으로 정렬함. */
+      justify-content: space-between; /* item들 사이의 균일한 간격을 두고 정렬함. */
+      justify-content: space-around; /* item들 둘레에 균일한 간격을 두고 정렬함. */
+      justify-content: space-evenly; /* item들 사이와 양끝에 균일한 간격을 두고 정렬함. */
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">dddddddddddddd</div>
+    <div class="flex_item">sssssssssssssss</div>
+    <div class="flex_item">33333333333333</div>
+  </div>
+</body>
+
+</html>

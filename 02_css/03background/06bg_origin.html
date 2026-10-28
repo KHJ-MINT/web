@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-origin 속성</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      margin-bottom: 50px;
+      width: 400px;
+      height: 200px;
+      border: 10px dotted red;
+      padding: 35px;
+      background-image: url(./img/bg8.png);
+      background-repeat: no-repeat;
+    }
+
+    .bg1 {
+      background-origin: padding-box;
+      /* 기본 값. */
+    }
+
+    .bg2 {
+      background-origin: border-box;
+      /* border를 포함하여 배치 */
+    }
+
+    .bg3 {
+      background-origin: content-box;
+      /* content 만큼만 배치 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, esse beatae veritatis dolorem ea
+    tempore, quod dolores, labore molestias nostrum aliquid minima ullam quas saepe. Eligendi neque laborum sapiente
+    aliquam?</div>
+  <div class="bg2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, esse beatae veritatis dolorem ea
+    tempore, quod dolores, labore molestias nostrum aliquid minima ullam quas saepe. Eligendi neque laborum sapiente
+    aliquam?</div>
+  <div class="bg3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, esse beatae veritatis dolorem ea
+    tempore, quod dolores, labore molestias nostrum aliquid minima ullam quas saepe. Eligendi neque laborum sapiente
+    aliquam?</div>
+</body>
+
+</html>

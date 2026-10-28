@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-box - align-content</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      width: 500px;
+      height: 500px;
+      flex-wrap: wrap;
+      /* item이 두 줄 이상일 때 교차축 기준의 배치 방법 */
+      align-content: stretch;
+      /* 기본값. */
+      align-content: flex-start;
+      /* 교차축 시작점에 맞춰 정렬 */
+      align-content: flex-end;
+      /* 교차축 끝점에 맞춰 정렬 */
+      align-content: center;
+      /* 교차축 중앙에 맞춰 정렬 */
+      align-content: space-between;
+      /* 첫번째와 마지막 아이템을 교차축 시작과 끝에 배치하고, 나머지를 같은 간격으로 정렬 */
+      align-content: space-around;
+      /* 모든 아이템을 교차축 기준 아이템들의 둘레에 같은 간격으로 정렬 */
+      align-content: space-evenly;
+      /* 모든 아이템을 교차축 기준 같은 간격으로 정렬 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">AAAAAAAAAAAA</div>
+    <div class="flex_item">BBB</div>
+    <div class="flex_item">CCCCCCCCC</div>
+    <div class="flex_item">DDDDDDDDDDDDDDDDDDDDDDD</div>
+    <div class="flex_item">EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</div>
+  </div>
+</body>
+
+</html>

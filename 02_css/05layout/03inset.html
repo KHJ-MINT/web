@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inset 단축 속성</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    dl {
+      background-color: rgba(0, 0, 255, 0.3);
+      position: absolute;
+      /* 좌표 값이 왼쪽 오른쪽 10px */
+      inset-inline: 10px;
+      /* 좌표 값이 위 아래 50px */
+      inset-block: 50px;
+    }
+
+    .overlay1 {
+      position: fixed;
+      background: #ccc;
+      inset: 0;
+    }
+
+    .overlay2 {
+      width: 500px;
+      height: 500px;
+      background: rgba(0, 255, 0, 0.3);
+      position: absolute;
+      /* 좌표 값이 위 1rem */
+      inset-block-start: 1rem;
+      /* 좌표 값이 왼쪽 2rem */
+      inset-inline-start: 2rem;
+      left: 100px;
+    }
+
+    .overlay3 {
+      background: rgba(255, 0, 0, 0.3);
+      position: absolute;
+      inset: 10rem 5rem;
+    }
+
+    .wrap {
+      background: rgba(255,255,0,0.3);
+      border: 1px solid rebeccapurple;
+      position: absolute;
+      /* width 속성이 auto이면 좌우간격을 제외한 너비가 적용됨 */
+      /* height 속성이 auto이면 상하간격을 제외한 높이가 적용됨 */
+      inset: 25vh 10%;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      position: absolute;
+      /* inset을 0으로 줬을 때 margin 값을 상하좌우 모두 auto를 쓰면 수평수직 중앙 정렬됨! */
+      inset: 0;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <dl> <!-- dl, dt, dd : 설명 목록 -->
+    <dt>inset 단축속성</dt>
+    <dd>top,right,bottom,left를 한번에 지정합니다</dd>
+  </dl>
+  <div class="overlay1"></div>
+  <div class="overlay2"></div>
+  <div class="overlay3"></div>
+  <div class="wrap">
+    <div class="box">item</div>
+  </div>
+</body>
+
+</html>

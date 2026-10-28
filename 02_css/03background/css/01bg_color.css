@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle&family=East+Sea+Dokdo&family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Diphylleia&family=Dongle&family=East+Sea+Dokdo&family=Nanum+Brush+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 배경색은 상속되지 않음! */
+  background-color: blueviolet;
+}
+
+.container {
+  width: 500px;
+  border: 1px solid #fff;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 1. hsl / 2.rgb / 3.16진수/ 4.rgba  구글웹폰트 4개 */
+ul {
+  list-style: none;
+}
+
+.ul1 {
+  font: 28px "Nanum Brush Script";
+  background-color: hsl(208, 45%, 85%);
+}
+
+.ul2 {
+  font: 20px "Dongle";
+  background-color: rgb(140, 64, 58);
+}
+
+.ul3 {
+  font: 24px "East Sea Dokdo";
+  background-color: #FFCD82;
+}
+
+.ul4 {
+  font: 16px "Diphylleia";
+  background-color: rgba(0, 80, 143, 0.4);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그라데이션 배경</title>
+  <style>
+    div {
+      width: 500px;
+      height: 500px;
+      margin: 10px;
+    }
+
+    .gr1 {
+      background: linear-gradient(135deg, #ff8a1e 0%, #ffe2a6 100%);
+    }
+
+    .gr2 {
+      background: radial-gradient(circle at 70% 32%, color-mix(in oklch, #ff8a1e 93%, transparent) 11%, color-mix(in oklch, #ffe2a6 93%, transparent) 46%);
+    }
+
+    .gr3 {
+      background: conic-gradient(from 217deg at 46% 63%, #ff8a1e 0 11%, #ffe2a6 32%, #ff8a1e 100%);
+    }
+
+    .gr4 {
+      background-color: #ffe2a6;
+      background-image:
+        radial-gradient(circle at 62% 14%, #ff8a1e 14% 32%, transparent 34%),
+        radial-gradient(circle at 82% 18%, color-mix(in oklch, #ff8a1e 48%, white) 0 16%, transparent 32%),
+        radial-gradient(circle at 72% 76%, #ffe2a6 0 18%, transparent 36%),
+        radial-gradient(circle at 24% 82%, color-mix(in oklch, #ffe2a6 55%, black) 0 16%, transparent 34%);
+      background-blend-mode: screen, normal, multiply, normal;
+    }
+
+    .gr5 {
+      background:
+        linear-gradient(112deg, color-mix(in oklch, #212cc4 18%, white), transparent 62%),
+        radial-gradient(ellipse at 20% 30%, #212cc4 0 18%, transparent 52%),
+        radial-gradient(ellipse at 78% 42%, #a8c5ff 0 20%, transparent 56%),
+        linear-gradient(180deg, color-mix(in oklch, #a8c5ff 38%, white), color-mix(in oklch, #212cc4 24%, black));
+    }
+
+    .gr6 {
+      background:
+        linear-gradient(212deg, rgba(255, 255, 255, .5), transparent 28%, rgba(255, 255, 255, .22) 52%, transparent 72%),
+        linear-gradient(135deg, color-mix(in oklch, #212cc4 90%, transparent), color-mix(in oklch, #a8c5ff 90%, transparent));
+      background-blend-mode: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gr1"></div>
+  <div class="gr2"></div>
+  <div class="gr3"></div>
+  <div class="gr4"></div>
+  <div class="gr5"></div>
+  <div class="gr6"></div>
+</body>
+
+</html>

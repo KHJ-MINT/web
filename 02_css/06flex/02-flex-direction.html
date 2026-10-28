@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-box - flex-direction</title>
+  <link rel="stylesheet" href="./default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      /* row(기본값) : item들이 행(가로)방향으로 배치 */
+      flex-direction: row;
+      /* column : item들이 열(세로)방향으로 배치 */
+      flex-direction: column;
+      /* row-reverse : item들이 역순으로 행(가로)방향 배치 */
+      flex-direction: row-reverse;
+      /* column-reverse : item들이 역순으로 열(세로)방향 배치 */
+      flex-direction: column-reverse;
+      flex-direction: row;
+      /* gap : item간의 간격 */
+      gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">ddd</div>
+    <div class="flex_item">ssss</div>
+    <div class="flex_item">333333</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>margin 중첩 현상</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 1300px;
+      height: 500px;
+      background-color: #ccc;
+      border: 2px solid red;
+      margin: 50px auto;
+    }
+
+    .first {
+      margin: 50px auto 0;
+    }
+
+    main {
+      background-color: lavender;
+      /* padding-block : padding top, padding bottom 값을 동시에 설정할 수 있는 속성. */
+      padding-block: 30px;
+    }
+
+    main .container {
+      /* margin 겹침 현상 해결을 위해 위 아래 여백 제거 */
+      margin-block: 0;
+      width: 1500px;
+      background: green;
+      padding-top: 10px;
+    }
+
+    #box1 {
+      width: 300px;
+      height: 300px;
+      background-color: pink;
+      /* margin-top: 10px; */
+    }
+
+    #box2 {
+      width: 100px;
+      height: 50px;
+      background-color: gold;
+      margin-block: 50px;
+    }
+
+    #box3 {
+      width: 200px;
+      height: 100px;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container first"></div>
+  <main>
+    <div class="container">
+      <div id="box1"></div>
+      <div id="box2"></div>
+      <div id="box3"></div>
+    </div>
+  </main>
+  <footer class="container"></footer>
+</body>
+
+</html>

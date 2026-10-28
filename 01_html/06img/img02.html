@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>용눈이오름</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+
+    thead,
+    tfoot {
+      background-color: #eee;
+    }
+
+    th,
+    td {
+      padding: 10px 20px;
+      width: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <figure> : 블럭 태그임. -->
+  <figure>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMGp7mdoFVrssv-da9Zv2HdTgierVg2ZdVmKj1TkgcQ&s=10"
+      alt="용눈이오름 사진 - 중앙일보">
+    <figcaption>완만하고 부드러운 용눈이오름</figcaption>
+  </figure>
+
+  <figure>
+    <figcaption>요안도라 객실</figcaption>
+    <table>
+      <!-- 표의 시맨틱 태그 사용은 의무는 아니나, 사용하면 자바스크립트나 화면 낭독기에서 보다 쉽게 해당 태그가 어떤 의미의 태그인지를 쉽게 알 수 있다. -->
+      <!-- <thead> : 표의 헤더 부분을 의미하는 시맨틱 태그 -->
+      <thead>
+        <tr>
+          <th>방 이름</th>
+          <th>대상</th>
+          <th>크기</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <!-- <tbody> : 표의 본문 부분을 의미하는 시맨틱 태그 -->
+      <tbody>
+        <tr>
+          <th>유채방</th>
+          <td>여성 도미토리</td>
+          <td rowspan="3">4인실</td>
+          <td rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+          <th rowspan="2">동백방</th>
+          <td>동성 도미토리</td>
+        </tr>
+        <tr>
+          <td>가족 1팀</td>
+        </tr>
+        <tr>
+          <th>천혜향방</th>
+          <td>-</td>
+          <td>2인실</td>
+        </tr>
+      </tbody>
+      <!-- <tfoot> : 표의 바닥 부분을 의미하는 시맨틱 태그 -->
+      <tfoot>
+        <tr>
+          <th colspan="4">바깥체 전체를 렌트합니다.</th>
+        </tr>
+      </tfoot>
+    </table>
+  </figure>
+</body>
+
+</html>

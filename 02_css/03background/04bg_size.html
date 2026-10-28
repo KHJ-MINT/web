@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-size 속성</title>
+  <style>
+    div {
+      width: 500px;
+      height: 400px;
+      border: 2px dotted red;
+      background-image: url(./img/1295.png);
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+
+    .bg1 {
+      background-size: auto;
+      /* 기본 값. 이미지 원본 사이즈 출력 */
+    }
+
+    .bg2 {
+      background-size: 200px 150px;
+      /* background-size : 너비 높이 */
+    }
+
+    .bg3 {
+      background-size: 60% 40%;
+    }
+
+    .bg4 {
+      background-size: contain;
+      /* 이미지를 모두 보이게 출력. 여백이 생길 수 있음. */
+    }
+
+    .bg5 {
+      background-size: cover;
+      /* 이미지가 꽉 차게 출력. 이미지가 잘릴 수 있음. */
+      background-position: center;
+      /* 이미지의 위치를 가운데를 기준으로 배치하기. */
+    }
+
+    .bg6 {
+      background-size: 100% 100%;
+      /* 이미지의 크기를 지정할 경우 이미지가 찌그려져 보일 수 있음! */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- div.[클래스이름]$*n : 클래스 이름 뒤에 숫자가 붙은 형태로 n개의 요소 생성 -->
+  <div class="bg1"></div>
+  <div class="bg2"></div>
+  <div class="bg3"></div>
+  <div class="bg4"></div>
+  <div class="bg5"></div>
+  <div class="bg6"></div>
+</body>
+
+</html>

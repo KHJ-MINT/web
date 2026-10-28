@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-box - flex-wrap</title>
+  <link rel="stylesheet" href="./default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      width: 700px;
+      /* nowrap(기본값) : 줄바꿈하지 않음. 넘치면 빠져나감. */
+      flex-wrap: nowrap;
+      /* wrap : 줄바꿈함. */
+      flex-wrap: wrap;
+      /* wrap-reverse : 줄바꿈함. 이때 시작점과 끝점이 바뀜. */
+      flex-wrap: wrap-reverse;
+      /* gap: 20px; */
+      row-gap: 20px;
+      column-gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+    <div class="flex_item">BBBBBBBBBBBBBBBBBBBBBBBB</div>
+    <div class="flex_item">
+      CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+    </div>
+  </div>
+</body>
+
+</html>

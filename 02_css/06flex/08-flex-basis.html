@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-box - flex-basis</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .flex_item {
+      width: 100px;
+      flex-basis: auto; /* 기본값. width가 있으면 width를 사용 */
+      flex-basis: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">dddddddddddddd</div>
+    <div class="flex_item">sssssssssssssss</div>
+    <div class="flex_item">33333333333333</div>
+  </div>
+</body>
+
+</html>

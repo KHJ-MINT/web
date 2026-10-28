@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>border 속성</title>
+  <style>
+    div {
+      width: 200px;
+      height: 100px;
+      margin: 15px;
+      display: inline-block;
+      background: rgba(0, 255, 0, 0.1);
+      border-width: 15px;
+    }
+
+    .none {
+      /* 기본 값. */
+      border-style: none;
+    }
+
+    .hidden {
+      border-style: hidden;
+    }
+
+    .dashed {
+      border-style: dashed;
+      color: blue;
+      border-color: red green cyan pink;
+    }
+
+    .dotted {
+      border-left-color: yellow;
+      border-style: dotted;
+    }
+
+    .double {
+      border-style: double;
+      border-bottom-width: 50px;
+    }
+
+    .groove {
+      /* 테두리를 창에 조각한 것처럼 표시함. 홈이 파인 듯한 입체적인 느낌이 듦. */
+      border-style: groove;
+    }
+
+    .inset {
+      /* 표에서 border-collape 속성의 값이 seperate일 경우 전체박스 테두리가 창에 박혀 있는 것처럼 표시되고, collapse일 경우 groove와 똑같이 표시됨. */
+      border-style: inset;
+    }
+
+    .outset {
+      /* 표에서 border-collapse 속성의 값이 seperate일 경우 전체 박스 테두리가 창에서 튀어나온 것처럼 표시됨. collapse일 경우 ridge와 똑같이 표시됨 */
+      border-style: outset;
+    }
+
+    .ridge {
+      /* 테두리를 창에서 튀어나온 것처럼 표시 */
+      border-style: ridge;
+    }
+
+    .solid {
+      /* 테두리를 실선으로 표시 */
+      border-style: solid;
+      border-width: 10px 20px;
+      border-color: red blue green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="none">none</div>
+  <div class="hidden">hidden</div>
+  <div class="dashed">dashed</div>
+  <div class="dotted">dotted</div>
+  <div class="double">double</div>
+  <div class="groove">groove</div>
+  <div class="inset">inset</div>
+  <div class="outset">outset</div>
+  <div class="ridge">ridge</div>
+  <div class="solid">solid</div>
+</body>
+
+</html>
