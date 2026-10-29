@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scale 02</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+      width: 640px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul li {
+      width: 200px;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    ul li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    ul li a img {
+      width: 100%;
+      height: 100%;
+      /* background-size 속성값 중 cover와 유사함. */
+      object-fit: cover;
+      transition: 0.6s;
+    }
+
+    ul li:hover a img {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><a href="#"><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTth_9soNBm1l64G9JKxXPDro6z-T_xMCLFz3ep4OvylA&s=10"
+          alt="연예인 1"></a></li>
+    <li><a href="#"><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjZav_N2yFlt41n9XWak4dqzc4UC2Uv0sdTKX7o7Rig&s=10"
+          alt="연예인 2"></a></li>
+    <li><a href="#"><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn44oG4gA9NTtsJNVna1P1i-bRpj6bBjhIsHRJZxHSfg&s=10"
+          alt="연예인 3"></a></li>
+  </ul>
+</body>
+
+</html>
