@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +22,56 @@
       color: inherit;
       text-decoration: none;
     }
+
+    nav ul li {
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid var(--point-color1);
+    }
+
+    nav ul li:nth-child(2) {
+      background: var(--point-color2);
+    }
+
+    nav ul li:nth-child(even) {
+      /* 짝수 */
+      background: var(--point-color3);
+    }
+
+    nav ul li:nth-child(odd) {
+      /* 홀수 */
+      background: var(--point-color1);
+    }
+
+    nav ul li:nth-child(2) a {
+      background: palegreen;
+    }
+
+    nav ul li:first-child {
+      background: lightblue;
+    }
+
+    nav ul li:last-child {
+      background: lightblue;
+    }
+
+    nav ul li:nth-last-child(2) { /* 요소의 순번을 아래에서부터 셈. */
+      background: lightcoral;
+    }
+
+    nav ul li:nth-child(5):hover a {
+      /* font-size: 2rem; */
+      background: yellow;
+    }
+
+    nav ul li:nth-child(3):hover {
+      background: limegreen;
+    }
   </style>
 </head>
+
 <body>
   <nav>
     <ul>
@@ -37,4 +86,5 @@
     </ul>
   </nav>
 </body>
+
 </html>

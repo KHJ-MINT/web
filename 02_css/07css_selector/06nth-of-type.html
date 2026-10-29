@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nth-of-type 선택자</title>
+  <style>
+    .container p:nth-of-type(2) { /* 같은 타입의 요소를 순번을 세어 선택 */
+      background: #ccc;
+    }
+
+    .container div:nth-last-of-type(1) { /* 같은 타입의 요소 중 뒤에서부터 순번을 세어 선택. */
+      background: tomato;
+    }
+
+    .container p:nth-child(5) {
+      background: blueviolet;
+    }
+
+    .container :nth-last-child(3) {
+      background: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>1-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum esse aperiam, quam corrupti eveniet
+      commodi necessitatibus corporis voluptates fugiat molestiae provident doloribus, recusandae tenetur at,
+      ipsam nam. Assumenda, explicabo quidem!</p>
+    <div>2-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae vero, amet illo perferendis unde
+      dicta iusto. Debitis, doloribus optio! Sapiente, aut assumenda tempore nobis aliquam praesentium dolorem
+      possimus voluptatem veritatis?</div>
+    <p>3-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum esse aperiam, quam corrupti eveniet
+      commodi necessitatibus corporis voluptates fugiat molestiae provident doloribus, recusandae tenetur at,
+      ipsam nam. Assumenda, explicabo quidem!</p>
+    <div>4-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae vero, amet illo perferendis unde
+      dicta iusto. Debitis, doloribus optio! Sapiente, aut assumenda tempore nobis aliquam praesentium dolorem
+      possimus voluptatem veritatis?</div>
+    <p>5-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum esse aperiam, quam corrupti eveniet
+      commodi necessitatibus corporis voluptates fugiat molestiae provident doloribus, recusandae tenetur at,
+      ipsam nam. Assumenda, explicabo quidem!</p>
+    <div>6-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae vero, amet illo perferendis unde
+      dicta iusto. Debitis, doloribus optio! Sapiente, aut assumenda tempore nobis aliquam praesentium dolorem
+      possimus voluptatem veritatis?</div>
+  </div>
+</body>
+
+</html>
