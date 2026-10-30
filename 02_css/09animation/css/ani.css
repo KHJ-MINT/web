@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  position: fixed;
+  /* position의 모든 좌표값 0 */
+  inset: 0;
+  background: url(../../images/background.png) no-repeat center/cover;
+}
