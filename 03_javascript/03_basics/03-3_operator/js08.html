@@ -19,9 +19,10 @@
 
     //comment가 h2태그로 뜨게
 
-    let num = prompt('숫자를 입력하세요.');
+    let num = Number(prompt('숫자를 입력하세요.'));
     let result = num % 2;
-    let comment = result == 0 ? '짝수입니다.' : '홀수입니다.';
+    // let comment = (result == 0) ? '짝수입니다.' : '홀수입니다.';
+    let comment = result ? '홀수입니다.' : '짝수입니다.';
 
     document.write(`<h2>${num}은 ${comment}</h2>`);
   </script>
