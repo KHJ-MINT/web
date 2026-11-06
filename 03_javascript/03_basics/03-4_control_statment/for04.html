@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for문 04</title>
+  <style>
+    p.red {
+      color: tomato;
+    }
+
+    p.green {
+      color: green;
+    }
+
+    p.aqua {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <p>1</p>
+  <p class="green">2</p> -->
+
+  <script>
+    for (let i = 1; i <= 100; i++) {
+      // document.write(`<p class="green">${i}</p>`);
+      // document.write(`<p>${i}</p>`);
+
+      /*
+         5의배수 이면서 7의 배수가 아닌것 red
+         5의 배수가 아니면서 7의 배수 green
+         5의배수 이면서 7의배수 일때 aqua
+         그외 p태그로
+      */
+
+      if (i % 5 == 0 && i % 7 !== 0) { // 5 10 15 20 25 30 40 45 50 55 60 65 75 80 85 90 95 100
+        document.write(`<p class="red">${i}</p>`);
+      } else if (i % 5 !== 0 && i % 7 == 0) { // 7 14 21 28 42 49 56 63 77 84 91 98
+        document.write(`<p class="green">${i}</p>`);
+      } else if (i % 5 == 0 && i % 7 == 0) { // 35 70 
+        document.write(`<p class="aqua">${i}</p>`);
+      } else {
+        document.write(`<p>${i}</p>`);
+      }
+    }
+  </script>
+</body>
+
+</html>
