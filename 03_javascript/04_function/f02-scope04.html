@@ -22,6 +22,22 @@
     }
 
     sumVar1();
+
+    let n2 = 100; // 전역 변수
+    function sumLet() {
+      let n2 = 10; // 지역 변수
+      let result2 = 0;
+
+      for (let z = 1; z <= n2; z++) {
+        result2 += z;
+      }
+      console.log(`sumLet 함수 내부 : ${result2}`);
+      // console.log(`sumLet 함수 내부 i : ${z}`);
+    }
+
+    sumLet();
+    console.log(n2);
+    // console.log(i); // 함수 지역 변수는 함수 바깥인 전역에서 부를 수 없음.
   </script>
 </body>
 
