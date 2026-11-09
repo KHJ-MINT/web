@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>function 02 - 지역 변수, 전역 변수</title>
+</head>
+
+<body>
+  <script>
+    // var로 선언된 변수는 선언 자체만 코드 맨 위로 끌어올려짐 -> 호이스팅됨.
+    // 초기화(값 대입)는 원래 위치에서 실행되므로, 선언 전 사용하면 undefined 상태로 출력됨.
+    console.log(r);
+    var r = 1;
+
+    var sum = 0; // 전역 변수 선언 + 초기화 - 스크립트 전체에서 사용할 수 있는 변수.
+    function addNumber() {
+      var localResult; // 지역 변수 선언 - 함수 안에서만 사용(유효)할 수 있는 변수.
+      sum = 10 + 20; // 전역 변수 sum 값을 변경.
+      autoResult = 10 * 20; // var let const 없이 선언. -> 자동으로 전역 변수로 선언됨(암묵적 호이스팅)
+      localResult = 10 * 20; // 지역 변수 localResult 값을 변경.
+
+      console.log('함수 안 ' + localResult);
+    }
+
+    addNumber();
+    console.log(sum); // 30 - 전역 변수 sum의 값이 함수를 거친 후 변경됨.
+    console.log(autoResult); // 200 - 함수 안에서 var let const 없이 선언됨 -> 호이스팅 되어 전역 변수처럼 동작함.
+    console.log(localResult); // error - 지역 변수 localResult는 함수 밖에서 호출할 수 없음.
+  </script>
+</body>
+
+</html>
