@@ -113,6 +113,7 @@ console.log(positionWidth.top);
 
 const $jsPosition = $position_width.querySelector('.js_position');
 const $temp = document.createElement('div');
+
 $temp.innerHTML =
   `<div>
     $jsPosition.offsetLeft : ${$jsPosition.offsetLeft},
