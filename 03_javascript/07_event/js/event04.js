@@ -17,5 +17,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //한 줄에 배치할 키 갯수
   const KEY_COUNT = 4;
-  
+
+  $keyCotainers.forEach((container, containerIndex) => {
+    for (let i = 0; i < KEY_COUNT; i++) {
+      const keyIndex = containerIndex * KEY_COUNT + i;
+      if (keyIndex < keys.length) {
+        const key = keys[keyIndex];
+        const $button = document.createElement('button');
+        $button.textContent = key;
+        $button.setAttribute('type', 'button');
+        $button.dataset.key = key.toLowerCase(); //dataset 속성으로 키값을 저장(소문자로 변경해서)
+        container.appendChild($button);
+      }
+    }
+  });
+
+  //키보드 키 누름(keydown 이벤트)
+  document.addEventListener('keydown', (e) => {
+    // console.log(e.key);
+    const allowKeys = [...document.querySelectorAll('[data-type="keydown"] button')].map(
+      (key) => key.dataset.key
+    );
+    //document.querySelectorAll('[data-type="keydown"] button')로 선택한 요소는 배열이 아닌 NodeList 타입이기 때문에 []를 사용하여, 배열로 만듦!
+    // console.log([...document.querySelectorAll('[data-type="keydown"] button')]); -> 각 버튼의 dataset에 key값이 있음! 그걸 map 메서드로 새로운 배열로 만드는 거임.
+    // console.log(allowKeys);
+
+    //허용되지 않은 키면 무시
+    if (!allowKeys.includes(e.key)) { return; }
+
+    //현재 이벤트 타입과 눌린 키 정보를 출력
+    $info.textContent = `type = ${e.type}, key = ${e.key}`;
+
+    //해당 키 버튼에 'pressed' 클래스 추가
+    const $target = document.querySelector(`[data-key="${e.key}"]`);
+    $target.classList.add('pressed');
+  });
+
+  //새로고침(리셋) 버튼 - 모든 'pressed' 클래스 제거 + 출력 영역 초기화
+  $refresh.addEventListener('click', () => {
+    $info.textContent = '-';
+    [...document.querySelectorAll('[data-key]')].forEach((key) => {
+      key.classList.remove('pressed');
+    });
+  });
+
+
 }); //end
