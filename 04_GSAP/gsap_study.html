@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP 스터디</title>
+  <!-- GSAP 본체 -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <!-- ScrollTrigger 플러그인. GSAP가 있어야만 사용 가능! -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+  <style>
+    /* Global styles come from external css https://codepen.io/GreenSock/pen/xxmzBrw */
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      gap: 1rem;
+    }
+
+    .box {
+      display: block;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box box1 green"></div>
+  <div class="box box2 orange"></div>
+  <div class="box box3 purple"></div>
+
+  <script>
+
+    //tweens are inserted at and relative to a label's position
+    let tl = gsap.timeline();
+    tl.to("#green", { duration: 1, x: 1074 })
+      //add blueSpin label 1 second after end of timeline
+      .add("blueSpin", "+=1")
+      //add tween at blueSpin label
+      .to("#blue", { duration: 1, x: 1074, rotation: 360 }, "blueSpin")
+      //insert tween 0.5 seconds after blueSpin label
+      .to("#orange", { duration: 1, x: 1074, rotation: 360 }, "blueSpin+=0.5");
+  </script>
+</body>
+
+</html>
