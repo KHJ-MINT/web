@@ -53,6 +53,42 @@ document.addEventListener('DOMContentLoaded', () => {
     $target.classList.add('pressed');
   });
 
+  //키보드 키 누름(keypress 이벤트)
+  document.addEventListener('keypress', (e) => {
+    // console.log(e.key);
+    const allowKeys = [...document.querySelectorAll('[data-type="keypress"] button')].map(
+      (key) => key.dataset.key
+    );
+
+    //허용되지 않은 키면 무시
+    if (!allowKeys.includes(e.key)) { return; }
+
+    //현재 이벤트 타입과 눌린 키 정보를 출력
+    $info.textContent = `type = ${e.type}, key = ${e.key}`;
+
+    //해당 키 버튼에 'pressed' 클래스 추가
+    const $target = document.querySelector(`[data-key="${e.key}"]`);
+    $target.classList.add('pressed');
+  });
+
+  //키보드 키에서 손을 땔 때(keyup 이벤트)
+  document.addEventListener('keyup', (e) => {
+    // console.log(e.key);
+    const allowKeys = [...document.querySelectorAll('[data-type="keyup"] button')].map(
+      (key) => key.dataset.key
+    );
+
+    //허용되지 않은 키면 무시
+    if (!allowKeys.includes(e.key)) { return; }
+
+    //현재 이벤트 타입과 눌린 키 정보를 출력
+    $info.textContent = `type = ${e.type}, key = ${e.key}`;
+
+    //해당 키 버튼에 'pressed' 클래스 추가
+    const $target = document.querySelector(`[data-key="${e.key}"]`);
+    $target.classList.add('pressed');
+  });
+
   //새로고침(리셋) 버튼 - 모든 'pressed' 클래스 제거 + 출력 영역 초기화
   $refresh.addEventListener('click', () => {
     $info.textContent = '-';
