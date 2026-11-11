@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const allowKeys = [...document.querySelectorAll('[data-type="keydown"] button')].map(
       (key) => key.dataset.key
     );
-    //document.querySelectorAll('[data-type="keydown"] button')로 선택한 요소는 배열이 아닌 NodeList 타입이기 때문에 []를 사용하여, 배열로 만듦!
+    // document.querySelectorAll('[data-type="keydown"] button')로 선택한 요소는 배열이 아닌 NodeList 타입이기 때문에 [...](스프레드 문법)를 사용하여, 배열로 만듦!
+    // NodeList 타입은 배열이 아니기 때문에 배열 메서드인 map()을 사용기 위해서는 배열로 만들어야 함.
     // console.log([...document.querySelectorAll('[data-type="keydown"] button')]); -> 각 버튼의 dataset에 key값이 있음! 그걸 map 메서드로 새로운 배열로 만드는 거임.
     // console.log(allowKeys);
 
