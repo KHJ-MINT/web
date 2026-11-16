@@ -58,3 +58,15 @@ setPager();
 
 //슬라이드가 바뀔 때마다 번호도 다시 바꿈.
 mainSlide.on('slideChange', setPager);
+
+//공지 영역의 세로 슬라이드
+const infoSlide = new Swiper('.info .article_top .swiper', {
+  direction: 'vertical',
+  //마지막 슬라이드 다음에 다시 첫 슬라이드로 이어지게
+  loop: true,
+  //자동으로 다음 슬라이드로 넘어가게
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
