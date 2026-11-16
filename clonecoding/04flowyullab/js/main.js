@@ -9,6 +9,9 @@ document.getElementById('ham_menu').addEventListener('click', function () {
 const mainSlide = new Swiper('.main_visual .swiper', {
   //마지막 슬라이드 다음에 다시 첫 슬라이드로 이어지게
   loop: true,
+  //전환 효과를 속성값으로 지정한다.
+  //slide, fade, cube, coverflow, flip, creative, cards 중 선택할 수 있으며, 기본값은 slide이다.
+  effect: 'slide',
   //자동으로 다음 슬라이드로 넘어가게
   autoplay: {
     delay: 5500,
