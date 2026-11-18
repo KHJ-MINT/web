@@ -1036,7 +1036,7 @@ main .more.border:hover {
   height: 265px;
   background: var(--yul-brand-paper-soft);
   border-radius: var(--round);
-  box-sizing: var(--yul-brand-shadow);
+  box-shadow: var(--yul-brand-shadow);
 }
 
 .curriculum .inner a {
