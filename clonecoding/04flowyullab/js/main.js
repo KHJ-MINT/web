@@ -45,7 +45,7 @@ const numEl = document.querySelector('.main_visual .pager .txt_box .num');
 //전체 슬라이드 갯수가 들어갈 자리
 const totalEl = document.querySelector('.main_visual .pager .txt_box span:last-of-type');
 
-//swiper는 loof를 쓰면 복제 슬라이드를 만듦.
+//swiper는 loof를 쓰면 복제 슬라이드를 만듦. -> 만들지 않더라도 혹시 모르니 복제본 빼고 진짜만 세기
 //그래서 복제본을 빼고 진짜 슬라이드만 세어야 전체 갯수가 맞음.
 const getTotal = () => mainSlide.slidesEl.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').length;
 
@@ -72,4 +72,50 @@ const infoSlide = new Swiper('.info .article_top .swiper', {
     delay: 2500,
     disableOnInteraction: false,
   },
+});
+
+//contents 영역의 가로 자동 슬라이드
+const contentsSlide = new Swiper('.contents .swiper', {
+  slidesPerView: 'auto', //카드 너비를 css에 맡기고, 보이는 만큼 자동으로 보여줌.
+  spaceBetween: 30, //카드 사이의 여백
+  loop: true,
+  loopAdditionalSlides: 5, //반복 재생하는 슬라이드의 수 설정.
+  speed: 9000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  on: {
+    //초기에 계속 같은 속도로 흐르게 linear를 적용
+    init: function () {
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    },
+    //슬라이드가 바뀔 때도 계속 같은 속도로 흐르게 linear 적용
+    slideChangeTransitionStart: function () {
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    },
+  }
+});
+
+//blog 영역의 가로 자동 슬라이드
+const blogSlide = new Swiper('.blog .swiper', {
+  slidesPerView: 'auto', //카드 너비를 css에 맡기고, 보이는 만큼 자동으로 보여줌.
+  spaceBetween: 30, //카드 사이의 여백
+  loop: true,
+  loopAdditionalSlides: 5, //반복 재생하는 슬라이드의 수 설정.
+  speed: 12000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  on: {
+    //초기에 계속 같은 속도로 흐르게 linear를 적용
+    init: function () {
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    },
+    //슬라이드가 바뀔 때도 계속 같은 속도로 흐르게 linear 적용
+    slideChangeTransitionStart: function () {
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    },
+  }
 });
