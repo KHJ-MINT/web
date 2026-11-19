@@ -1177,6 +1177,52 @@ main .more.border:hover {
 }
 
 footer {
-  height: 400px;
-  background: violet;
+  width: 100%;
+  padding: 60px 0 100px;
+  background: var(--gray-09);
+  color: var(--gray-00);
+}
+
+footer .f_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .f_top .logo_box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+footer .f_top .logo_box .logo {
+  font-size: 3rem;
+  font-family: var(--font-Eng2);
+  font-weight: 200;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+footer .f_top .logo_box .logo_b {
+  display: flex;
+  gap: 50px;
+  font-size: 1.1rem;
+  opacity: 0.4;
+}
+
+footer .f_top .btn_box {
+  display: flex;
+  gap: 20px;
+  height: 60px;
+}
+
+footer .f_top .btn_box a,
+footer .f_top button {}
+
+footer .f_top .btn_box a:hover,
+footer .f_top button:hover {}
+
+footer .f_bottom {
+  margin-top: 80px;
+  height: 100px;
+  background: wheat;
 }
