@@ -284,12 +284,134 @@
   }
 
   .con {
-    padding: 54px 0;
+    padding: 0;
   }
 
   .con .inner {
     padding-inline: 20px;
     height: 32px;
     margin-bottom: 20px;
+  }
+
+  .con .inner a.more {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+
+  .con .inner a.more em {
+    display: none;
+  }
+
+  .contents {
+    padding-top: 70px;
+  }
+
+  .contents .swiper {
+    height: 380px;
+    padding-bottom: 50px;
+  }
+
+  .contents .swiper .box {
+    width: 320px;
+  }
+
+  .contents .swiper .box .txt_box em {
+    font-size: 14px;
+  }
+
+  .contents .swiper .box .txt_box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contents .swiper .box .txt_box span {
+    font-size: 13px;
+  }
+
+  .blog .swiper {
+    height: 360px;
+    padding-bottom: 50px;
+  }
+
+  .blog .swiper .box {
+    width: 320px;
+  }
+
+  .blog .swiper .box .img_box {
+    height: 184px;
+    /* 불필요하게 줄어드는 상황을 방지하기 위해 */
+    flex-shrink: 0;
+  }
+
+  .blog .swiper .box .txt_box {
+    padding: 24px;
+  }
+
+  .blog .swiper .box .txt_box em {
+    font-size: 14px;
+  }
+
+  .blog .swiper .box .txt_box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .blog .swiper .box .txt_box span {
+    font-size: 13px;
+  }
+
+  .curriculum {
+    padding-inline: 20px;
+    padding-top: 30px;
+  }
+
+  .curriculum .inner {
+    position: relative;
+  }
+
+  .curriculum .inner a .txt_box {
+    width: 70%;
+  }
+
+  .curriculum span {
+    font-size: 12px;
+  }
+
+  .curriculum .list_box {
+    width: 300px;
+  }
+
+  .contact .inner {
+    height: auto;
+    flex-direction: column;
+    padding-inline: 20px;
+  }
+
+  .contact .inner article {
+    padding: 32px;
+    /* 높이 값 지정. */
+    flex-basis: 124px;
+  }
+
+  .contact .inner article a {
+    background-size: 54px;
+  }
+
+  .contact .inner article a h3 {
+    font-size: 16px;
+  }
+
+  .contact .inner article a p {
+    font-size: 14px;
   }
 }
