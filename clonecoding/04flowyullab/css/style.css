@@ -265,8 +265,7 @@ header.on .ham_menu {
 }
 
 header .container {
-  width: 100%;
-  max-width: 1300px;
+  width: min(1280px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -326,13 +325,13 @@ header .container .all_con ul.list>li:hover button::before {
   width: 100%;
 }
 
-header .container .all_con ul.list>li ul.sub_list {
+header .container .all_con ul.list>li ul {
   margin-top: 2em;
   line-height: 2.4;
   font-size: 16px;
 }
 
-header .container .all_con ul.list>li ul.sub_list li:hover a {
+header .container .all_con ul.list>li ul li:hover a {
   color: var(--yul-brand-amber);
 }
 
@@ -717,6 +716,8 @@ main .more.border:hover {
   height: 1000px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 3;
 }
 
 .motion .tit b {
