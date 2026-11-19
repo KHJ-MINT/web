@@ -335,7 +335,8 @@
   }
 
   .blog .swiper {
-    height: 360px;
+    /* height: 360px; */
+    height: 408px;
     padding-bottom: 50px;
   }
 
