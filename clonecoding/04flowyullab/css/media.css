@@ -124,7 +124,6 @@
     line-height: 3.3;
     justify-content: space-between;
     padding-inline: 20px;
-    font-weight: 100;
   }
 
   header .container .all_con ul.list>li button::before {
@@ -132,11 +131,14 @@
     background: transparent;
     position: relative;
     order: 3;
-    transform: rotate(90deg);
+    transform: rotate(90deg) scaleY(1.4);
+    font-weight: 100;
+    width: auto;
+    font-family: var(--font-Eng2);
   }
 
   header .container .all_con ul.list>li.on button::before {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) scaleY(1.4);
   }
 
   header .container .all_con ul.list>li:hover button::before {
@@ -152,5 +154,142 @@
 
   header .container .all_con ul.list>li.on ul {
     display: block;
+  }
+
+  /* main_visual */
+  .txt_area .tit {
+    font-size: 42px;
+  }
+
+  .article_bottom {
+    height: auto;
+    display: block;
+    padding-inline: 20px;
+  }
+
+  .article_bottom .box {
+    margin-bottom: 20px;
+    height: 180px;
+    padding: 36px;
+  }
+
+  .article_bottom .box em {
+    font-size: 16px;
+  }
+
+  .article_bottom .box p {
+    font-size: 40px;
+    width: 180px;
+  }
+
+  .article_bottom .box .txt_b {
+    left: 36px;
+  }
+
+  .article_bottom .box:hover .txt_b {
+    transform: translateY(102px);
+  }
+
+  .article_bottom .box3:hover .txt_b {
+    transform: translateY(0);
+  }
+
+  .article_bottom .box .txt_b span {
+    font-size: 12px;
+  }
+
+  .article_bottom .box1 {
+    height: 310px;
+    /* 본인 사이즈만큼 사용하도록 변경. */
+    flex-basis: auto;
+  }
+
+  .article_bottom .box1:hover {
+    flex: 1 auto;
+  }
+
+  .article_bottom .box_all {
+    display: block;
+  }
+
+  .article_bottom .box_all>div {
+    display: block;
+    height: auto;
+  }
+
+  .article_bottom .box2 img {
+    width: 156px;
+    right: 30px;
+  }
+
+  .article_bottom .box3 {
+    width: calc(50% - 10px);
+    float: left;
+  }
+
+  .article_bottom .box3 img {
+    display: none;
+  }
+
+  .article_bottom .box4 {
+    width: calc(50% - 10px);
+    float: right;
+  }
+
+  .article_bottom .box5 {
+    clear: both;
+  }
+
+  .article_bottom .box5 img {
+    width: 150px;
+    right: 40px;
+    transform: translateY(0);
+  }
+
+  .motion {
+    display: none;
+  }
+
+  .tit_eng {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .learning {
+    padding: 0 0 56px;
+  }
+
+  .learning ul {
+    display: block;
+    height: auto;
+  }
+
+  .learning ul li {
+    height: 110px;
+    margin-bottom: 20px;
+  }
+
+  .learning ul li:hover img {
+    opacity: 1;
+  }
+
+  .learning ul li h3 {
+    transform: rotate(0) translateY(0);
+  }
+
+  .learning ul li .txt a,
+  .learning ul li::after,
+  .learning ul li:hover .txt {
+    display: none;
+  }
+
+  .con {
+    padding: 54px 0;
+  }
+
+  .con .inner {
+    padding-inline: 20px;
+    height: 32px;
+    margin-bottom: 20px;
   }
 }
