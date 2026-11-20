@@ -1099,7 +1099,7 @@ main .more.border:hover {
 
 .curriculum .badge_list li {
   width: calc((100% - 12px) / 2);
-  min-width: 54px;
+  min-height: 54px;
   border: 1px solid var(--yul-brand-line);
   border-radius: 999px;
   display: flex;
