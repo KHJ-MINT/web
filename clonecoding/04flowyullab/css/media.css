@@ -559,4 +559,104 @@
   }
 }
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+  .main_visual {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
+  .main_visual .swiper li {
+    align-items: center;
+  }
+
+  .main_visual .swiper li .txt_area {
+    height: 80%;
+    padding: 40px;
+  }
+
+  .sub_txt {
+    font-size: 2.6vw;
+  }
+
+  .txt_area .tit {
+    font-size: 5vw;
+  }
+
+  .txt_area .txt {
+    font-size: 2.75vw;
+    line-height: 1.4;
+  }
+
+  main .more {
+    height: auto;
+    padding: 14px 30px;
+    font-size: clamp(2.8vw, 1rem, 3vw);
+  }
+
+  .main_visual .pager {
+    height: 6vh;
+    font-size: 12px;
+    padding-bottom: 1vh;
+  }
+
+  .main_visual .pager button {
+    font-size: 2rem;
+  }
+
+  .article_top {
+    height: 6vw;
+    padding: 6vw 4vw;
+  }
+
+  .article_top .slide .swiper li a {
+    font-size: 3vw;
+    gap: 10px;
+    padding-inline: 1vw;
+  }
+
+  .article_top .slide .swiper li a .txt {
+    flex: 1;
+  }
+
+  .article_top .slide .swiper li a .day {
+    display: none;
+  }
+
+  .article_bottom {
+    margin-top: 5vh;
+    padding-inline: 0;
+  }
+
+  .learning,
+  .con .inner,
+  .curriculum,
+  .contact .inner {
+    padding-inline: 0;
+  }
+
+  .curriculum .inner a {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .curriculum .inner a .txt_box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .curriculum .txt_box p {
+    font-size: 3vw;
+  }
+
+  .curriculum .list_box {
+    width: 100%;
+    height: auto;
+  }
+
+  .curriculum .list_box li {
+    height: 34px;
+  }
+
+  footer {}
+}
