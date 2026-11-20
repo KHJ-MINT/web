@@ -6,6 +6,37 @@ document.getElementById('ham_menu').addEventListener('click', function () {
   document.querySelector('html, body').classList.toggle('no-scroll');
 });
 
+document.querySelectorAll('header .container .all_con ul.list>li').forEach(function (li) {
+  const button = li.querySelector('button');
+
+  //버튼이 없는 항목은 건너뛰기
+  if (!button) {
+    return;
+  }
+
+  //버튼 클릭
+  button.addEventListener('click', function() {
+    //css의 미디어쿼리와 동일하게 1160px 이하에서만 실행.
+    if(!window.matchMedia('(max-width:1160px)').matches) {
+      return;
+    }
+
+    //클릭한 li가 이미 on 클래스를 가지고 있는지 확인.
+    const isAlreadyClassOn = li.classList.contains('on');
+
+    //모든 li에서 클래스 'on' 제거
+    document.querySelectorAll('header .container .all_con ul.list>li').forEach(function(item) {
+      item.classList.remove('on');
+    });
+
+    //클릭한 li에 클래스 on이 없으면 추가.
+    if(!isAlreadyClassOn) {
+      li.classList.add('on');
+    }
+
+  });
+})
+
 let scrollLockY = 0; //스크롤 위치
 
 const setScrollLocked = (isLocked) => {
