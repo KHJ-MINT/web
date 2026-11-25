@@ -27,4 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
     li.style.transitionDelay = `${0.2 * (idx + 1)}s`;
   });
 
+  //화면 스크롤 시 header에 색상, blur 바꾸기
+  window.addEventListener('scroll', () => {
+    const st = window.scrollY;
+    // console.log(st);
+
+    if (st >= 80) {
+      $header.classList.add('sc');
+    } else {
+      $header.classList.remove('sc');
+    }
+  });
+
 }); //end
