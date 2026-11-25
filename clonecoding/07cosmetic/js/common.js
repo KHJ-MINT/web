@@ -39,4 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  //화면이 작아졌을 때 AOS 속성 변경
+  const media1100 = window.matchMedia('(max-width:1100px)');
+
+  function handleScreenResize(e) {
+    const $productList = document.querySelectorAll('.best_product .right_box ul li');
+    if (e.matches) {
+      console.log('화면 크기 1100px 이하');
+      $productList.forEach((item) => {
+        // console.log(item);
+        item.setAttribute('data-aos', 'fade-down');
+      });
+    } else {
+      console.log('화면 크기가 1100보다 큼');
+      $productList.forEach((item) => {
+        // console.log(item);
+        item.setAttribute('data-aos', 'flip-right');
+      });
+    }
+  }
+
+  handleScreenResize(media1100);
+
+  media1100.addEventListener('change', handleScreenResize);
+
 }); //end
